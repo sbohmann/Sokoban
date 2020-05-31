@@ -13,6 +13,9 @@
 		96F7011D248241E1007ADC0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F7011B248241E1007ADC0D /* Main.storyboard */; };
 		96F7011F248241E2007ADC0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F7011E248241E2007ADC0D /* Assets.xcassets */; };
 		96F70122248241E2007ADC0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F70120248241E2007ADC0D /* LaunchScreen.storyboard */; };
+		96F7012B248243BC007ADC0D /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7012A248243BC007ADC0D /* GameView.swift */; };
+		96F701382483C785007ADC0D /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F701372483C785007ADC0D /* Game.m */; };
+		96F7013B2483C932007ADC0D /* Logic.c in Sources */ = {isa = PBXBuildFile; fileRef = 96F7013A2483C932007ADC0D /* Logic.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,14 @@
 		96F7011E248241E2007ADC0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96F70121248241E2007ADC0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96F70123248241E2007ADC0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96F7012A248243BC007ADC0D /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		96F7013224827C63007ADC0D /* player.afphoto */ = {isa = PBXFileReference; lastKnownFileType = file; path = player.afphoto; sourceTree = "<group>"; };
+		96F7013324827C63007ADC0D /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
+		96F701362483C785007ADC0D /* Sokoban-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sokoban-Bridging-Header.h"; sourceTree = "<group>"; };
+		96F701372483C785007ADC0D /* Game.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		96F701392483C7DB007ADC0D /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		96F7013A2483C932007ADC0D /* Logic.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Logic.c; sourceTree = "<group>"; };
+		96F7013C2483CDA6007ADC0D /* GameInstantiation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameInstantiation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +67,8 @@
 		96F70114248241E1007ADC0D /* Sokoban */ = {
 			isa = PBXGroup;
 			children = (
+				96F7013124827C63007ADC0D /* images */,
+				96F701292482439F007ADC0D /* GameView */,
 				96F70115248241E1007ADC0D /* AppDelegate.swift */,
 				96F70117248241E1007ADC0D /* SceneDelegate.swift */,
 				96F70119248241E1007ADC0D /* ViewController.swift */,
@@ -63,8 +76,30 @@
 				96F7011E248241E2007ADC0D /* Assets.xcassets */,
 				96F70120248241E2007ADC0D /* LaunchScreen.storyboard */,
 				96F70123248241E2007ADC0D /* Info.plist */,
+				96F701372483C785007ADC0D /* Game.m */,
+				96F701362483C785007ADC0D /* Sokoban-Bridging-Header.h */,
+				96F701392483C7DB007ADC0D /* Game.h */,
+				96F7013A2483C932007ADC0D /* Logic.c */,
+				96F7013C2483CDA6007ADC0D /* GameInstantiation.h */,
 			);
 			path = Sokoban;
+			sourceTree = "<group>";
+		};
+		96F701292482439F007ADC0D /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				96F7012A248243BC007ADC0D /* GameView.swift */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		96F7013124827C63007ADC0D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				96F7013224827C63007ADC0D /* player.afphoto */,
+				96F7013324827C63007ADC0D /* player.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +134,7 @@
 				TargetAttributes = {
 					96F70111248241E1007ADC0D = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -138,8 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F7013B2483C932007ADC0D /* Logic.c in Sources */,
 				96F7011A248241E1007ADC0D /* ViewController.swift in Sources */,
+				96F701382483C785007ADC0D /* Game.m in Sources */,
 				96F70116248241E1007ADC0D /* AppDelegate.swift in Sources */,
+				96F7012B248243BC007ADC0D /* GameView.swift in Sources */,
 				96F70118248241E1007ADC0D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 327TCYU8D4;
 				INFOPLIST_FILE = Sokoban/Info.plist;
@@ -293,6 +333,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = at.yeoman.mutabor.Sokoban;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sokoban/Sokoban-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 327TCYU8D4;
 				INFOPLIST_FILE = Sokoban/Info.plist;
@@ -311,6 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = at.yeoman.mutabor.Sokoban;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sokoban/Sokoban-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
