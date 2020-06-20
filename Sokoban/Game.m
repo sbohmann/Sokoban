@@ -32,3 +32,7 @@ void Game_load_sprite(struct Game *self, size_t key, const char *name) {
 void Game_draw_sprite(struct Game *self, size_t key, struct Position position) {
     [self->view drawSpriteWithKey:key position:position];
 }
+
+void Game_redraw(struct Game *self) {
+    [self->view redraw];
+}

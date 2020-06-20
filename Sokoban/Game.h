@@ -13,6 +13,8 @@ void Game_load_sprite(struct Game *self, size_t key, const char *name);
 
 void Game_draw_sprite(struct Game *self, size_t key, struct Position position);
 
+void Game_redraw(struct Game *self);
+
 struct Logic;
 
 struct Logic * Logic_create(struct Game *game);
