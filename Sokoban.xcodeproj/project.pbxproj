@@ -35,6 +35,7 @@
 		96F701392483C7DB007ADC0D /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		96F7013A2483C932007ADC0D /* Logic.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Logic.c; sourceTree = "<group>"; };
 		96F7013C2483CDA6007ADC0D /* GameInstantiation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameInstantiation.h; sourceTree = "<group>"; };
+		96F7013E2484DCB6007ADC0D /* generator.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = generator.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +68,7 @@
 		96F70114248241E1007ADC0D /* Sokoban */ = {
 			isa = PBXGroup;
 			children = (
+				96F7013D2484D621007ADC0D /* Generator */,
 				96F7013124827C63007ADC0D /* images */,
 				96F701292482439F007ADC0D /* GameView */,
 				96F70115248241E1007ADC0D /* AppDelegate.swift */,
@@ -76,10 +78,10 @@
 				96F7011E248241E2007ADC0D /* Assets.xcassets */,
 				96F70120248241E2007ADC0D /* LaunchScreen.storyboard */,
 				96F70123248241E2007ADC0D /* Info.plist */,
-				96F701372483C785007ADC0D /* Game.m */,
-				96F701362483C785007ADC0D /* Sokoban-Bridging-Header.h */,
 				96F701392483C7DB007ADC0D /* Game.h */,
+				96F701372483C785007ADC0D /* Game.m */,
 				96F7013A2483C932007ADC0D /* Logic.c */,
+				96F701362483C785007ADC0D /* Sokoban-Bridging-Header.h */,
 				96F7013C2483CDA6007ADC0D /* GameInstantiation.h */,
 			);
 			path = Sokoban;
@@ -102,7 +104,32 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		96F7013D2484D621007ADC0D /* Generator */ = {
+			isa = PBXGroup;
+			children = (
+				96F7013E2484DCB6007ADC0D /* generator.py */,
+			);
+			path = Generator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		96F7013F2484DDB8007ADC0D /* Generator */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "${PROJECT_DIR}/Sokoban/Generator/generator.py";
+			buildConfigurationList = 96F701402484DDB8007ADC0D /* Build configuration list for PBXLegacyTarget "Generator" */;
+			buildPhases = (
+			);
+			buildToolPath = python3;
+			buildWorkingDirectory = "${PROJECT_DIR}/Sokoban";
+			dependencies = (
+			);
+			name = Generator;
+			passBuildSettingsInEnvironment = 0;
+			productName = Generator;
+		};
+/* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
 		96F70111248241E1007ADC0D /* Sokoban */ = {
@@ -136,6 +163,9 @@
 						CreatedOnToolsVersion = 11.3;
 						LastSwiftMigration = 1130;
 					};
+					96F7013F2484DDB8007ADC0D = {
+						CreatedOnToolsVersion = 11.3;
+					};
 				};
 			};
 			buildConfigurationList = 96F7010D248241E1007ADC0D /* Build configuration list for PBXProject "Sokoban" */;
@@ -152,6 +182,7 @@
 			projectRoot = "";
 			targets = (
 				96F70111248241E1007ADC0D /* Sokoban */,
+				96F7013F2484DDB8007ADC0D /* Generator */,
 			);
 		};
 /* End PBXProject section */
@@ -360,6 +391,33 @@
 			};
 			name = Release;
 		};
+		96F701412484DDB8007ADC0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 327TCYU8D4;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		96F701422484DDB8007ADC0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 327TCYU8D4;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -377,6 +435,15 @@
 			buildConfigurations = (
 				96F70127248241E2007ADC0D /* Debug */,
 				96F70128248241E2007ADC0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96F701402484DDB8007ADC0D /* Build configuration list for PBXLegacyTarget "Generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F701412484DDB8007ADC0D /* Debug */,
+				96F701422484DDB8007ADC0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

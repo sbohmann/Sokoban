@@ -14,6 +14,10 @@ struct Logic * Logic_create(struct Game *game) {
     return result;
 }
 
-void Logic_start(struct Logic *instance) {
-    Game_display(instance->game);
+void Logic_start(struct Logic *self) {
+    Game_load_sprite(self->game, 1, "player");
+}
+
+void Logic_draw(struct Logic *self) {
+    Game_draw_sprite(self->game, 1, (struct Position) {30, 100});
 }

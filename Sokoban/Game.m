@@ -10,23 +10,25 @@ struct Game {
     GameView *view;
 };
 
-struct Game * Game_create(id view) {
-    struct Game *result = malloc(sizeof(struct Game));
-    *result = (struct Game) { view };
-    return result;
-}
-
 //static void list_selectors(struct Game *instance) {
 //    unsigned int method_count = 0;
-//    Method * mlist = class_copyMethodList(object_getClass(instance->view), &method_count);
+//    Method *method_list = class_copyMethodList(object_getClass(instance->view), &method_count);
 //    NSLog(@"%d methods", method_count);
 //    for (int index=0; index < method_count; index++) {
-//        NSLog(@"Method no #%d: %s", index, sel_getName(method_getName(mlist[index])));
+//        NSLog(@"Method no #%d: %s", index, sel_getName(method_getName(method_list[index])));
 //    }
 //}
 
-void Game_display(struct Game *instance) {
-//    list_selectors(instance);
+struct Game * Game_create(id view) {
+    struct Game *result = malloc(sizeof(struct Game));
+    result->view = view;
+    return result;
+}
 
-    [instance->view display];
+void Game_load_sprite(struct Game *self, size_t key, const char *name) {
+    [self->view loadSpriteWithKey: key name:[NSString stringWithUTF8String:name]];
+}
+
+void Game_draw_sprite(struct Game *self, size_t key, struct Position position) {
+    [self->view drawSpriteWithKey:key position:position];
 }

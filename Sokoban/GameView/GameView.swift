@@ -6,37 +6,15 @@ private func report(_ context: String, _ rect: CGRect) {
 }
 
 class GameView : UIView {
-    var x = 70
-    var y = 100
-    var dx = 1
-    var dy = 1
-    var shown = false;
-    
-    let sprite = UIImage(named: "player")!.cgImage!
+    var sprites = Dictionary<UInt, UIImage>()
     
     var game: OpaquePointer?
     var logic: OpaquePointer?
     
     func start() {
-        Timer.scheduledTimer(withTimeInterval: 1.0 / 60.0, repeats: true, block: { _ in
-            self.move()
-            self.setNeedsDisplay()
-        })
-        
         game = Game_create(self)
         logic = Logic_create(game)
         Logic_start(logic)
-    }
-    
-    private func move() {
-        if (x == 0 || CGFloat(x + sprite.width) >= bounds.width) {
-            dx = -dx
-        }
-        if (y == 0 || CGFloat(y + sprite.height) >= bounds.height) {
-            dy = -dy
-        }
-        x += dx
-        y += dy
     }
     
     override func draw(_ rect: CGRect) {
@@ -52,13 +30,21 @@ class GameView : UIView {
         g.strokePath()
 //        NSAttributedString(string: "Hi!", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 30)]).draw(at: CGPoint(x: x, y: y))
         
-        if shown {
-            let target = CGRect(x: x, y: y, width: sprite.width, height: sprite.height)
-            g.draw(sprite, in: target)
-        }
+        Logic_draw(logic)
     }
     
-    @objc func display() {
-        shown = true;
+    @objc func loadSprite(key: UInt, name: String) {
+        NSLog("loadSprite - key: \(key), path: \(name)")
+        let image = UIImage(named: name)
+        sprites[key] = image
+    }
+    
+    @objc func drawSprite(key: UInt, position: Position) {
+        guard let g = UIGraphicsGetCurrentContext() else {
+            return
+        }
+        let sprite = sprites[key]!.cgImage!
+        let target = CGRect(x: position.x, y: position.y, width: sprite.width, height: sprite.height)
+        g.draw(sprite, in: target)
     }
 }
