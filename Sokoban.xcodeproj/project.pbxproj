@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		960C648F249FBCA500F54E54 /* images.py in Resources */ = {isa = PBXBuildFile; fileRef = 960C648E249FBCA500F54E54 /* images.py */; };
+		960C6496249FC39300F54E54 /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 960C6490249FC39300F54E54 /* wall.png */; };
+		960C6497249FC39300F54E54 /* wall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 960C6491249FC39300F54E54 /* wall@2x.png */; };
+		960C6498249FC39300F54E54 /* wall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 960C6492249FC39300F54E54 /* wall@3x.png */; };
+		960C6499249FC39300F54E54 /* floor.png in Resources */ = {isa = PBXBuildFile; fileRef = 960C6493249FC39300F54E54 /* floor.png */; };
+		960C649A249FC39300F54E54 /* floor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 960C6494249FC39300F54E54 /* floor@3x.png */; };
+		960C649B249FC39300F54E54 /* floor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 960C6495249FC39300F54E54 /* floor@2x.png */; };
 		96F70116248241E1007ADC0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F70115248241E1007ADC0D /* AppDelegate.swift */; };
 		96F70118248241E1007ADC0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F70117248241E1007ADC0D /* SceneDelegate.swift */; };
 		96F7011A248241E1007ADC0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F70119248241E1007ADC0D /* ViewController.swift */; };
@@ -19,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		960C648E249FBCA500F54E54 /* images.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = images.py; sourceTree = "<group>"; };
+		960C6490249FC39300F54E54 /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall.png; sourceTree = "<group>"; };
+		960C6491249FC39300F54E54 /* wall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wall@2x.png"; sourceTree = "<group>"; };
+		960C6492249FC39300F54E54 /* wall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wall@3x.png"; sourceTree = "<group>"; };
+		960C6493249FC39300F54E54 /* floor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floor.png; sourceTree = "<group>"; };
+		960C6494249FC39300F54E54 /* floor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "floor@3x.png"; sourceTree = "<group>"; };
+		960C6495249FC39300F54E54 /* floor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "floor@2x.png"; sourceTree = "<group>"; };
 		96F70112248241E1007ADC0D /* Sokoban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sokoban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F70115248241E1007ADC0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F70117248241E1007ADC0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +112,12 @@
 		96F7013124827C63007ADC0D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				960C6493249FC39300F54E54 /* floor.png */,
+				960C6495249FC39300F54E54 /* floor@2x.png */,
+				960C6494249FC39300F54E54 /* floor@3x.png */,
+				960C6490249FC39300F54E54 /* wall.png */,
+				960C6491249FC39300F54E54 /* wall@2x.png */,
+				960C6492249FC39300F54E54 /* wall@3x.png */,
 				96F7013224827C63007ADC0D /* player.afphoto */,
 				96F7013324827C63007ADC0D /* player.png */,
 			);
@@ -108,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				96F7013E2484DCB6007ADC0D /* generator.py */,
+				960C648E249FBCA500F54E54 /* images.py */,
 			);
 			path = Generator;
 			sourceTree = "<group>";
@@ -192,8 +213,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				960C6497249FC39300F54E54 /* wall@2x.png in Resources */,
+				960C6498249FC39300F54E54 /* wall@3x.png in Resources */,
 				96F70122248241E2007ADC0D /* LaunchScreen.storyboard in Resources */,
+				960C6496249FC39300F54E54 /* wall.png in Resources */,
 				96F7011F248241E2007ADC0D /* Assets.xcassets in Resources */,
+				960C648F249FBCA500F54E54 /* images.py in Resources */,
+				960C649A249FC39300F54E54 /* floor@3x.png in Resources */,
+				960C649B249FC39300F54E54 /* floor@2x.png in Resources */,
+				960C6499249FC39300F54E54 /* floor.png in Resources */,
 				96F7011D248241E1007ADC0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
